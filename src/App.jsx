@@ -2,6 +2,8 @@ import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import DefaultLayouts from "./layouts/DefaultLayouts";
 import RubricaViaggio from "./pages/RubricaViaggio";
+import "./App.css";
+
 
 
 function App() {

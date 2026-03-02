@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
         <div style={{ maxWidth: 900, margin: "40px auto", fontFamily: "Arial" }}>
-            <h1 style={{ textAlign: "center", marginBottom: 30 }}>Lista Viaggi</h1>
+            <h1 style={{ textAlign: "center", marginBottom: 30, color: "white", fontSize:"80px"}}>Lista Viaggi</h1>
             {viaggi.map((viaggio) => (
                 <div
                     key={viaggio.id}
