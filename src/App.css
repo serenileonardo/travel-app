@@ -1,7 +1,23 @@
 body {
-    background-image: url("https://images.everyeye.it/img-notizie/qual-cittA-mondo-scopriamolo-insieme-v4-519184.jpg");
-    background-color: transparent;
+  margin: 0;
+  position: relative;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("https://images.everyeye.it/img-notizie/qual-cittA-mondo-scopriamolo-insieme-v4-519184.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(2px);  
+  z-index: -1;
+} 
+
+
 
 
 
