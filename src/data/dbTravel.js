@@ -45,3 +45,6 @@ const dbTravel = [
     viaggio: "Barcellona"
   }
 ];
+
+
+export default dbTravel;
