@@ -1,4 +1,4 @@
-const dbTravel = [
+const viaggi = [
   {
     "id": 1,
     "localita": "Roma",
@@ -77,4 +77,4 @@ const dbTravel = [
 ]
 
 
-export default dbTravel;
+export default viaggi;
