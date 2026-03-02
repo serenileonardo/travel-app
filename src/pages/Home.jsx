@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import  viaggi  from "../data/dbTravel";
+import viaggi from "../data/dbTravel";
 
 export default function Home() {
     const [openId, setOpenId] = useState(null);
@@ -48,32 +48,22 @@ export default function Home() {
                             <p>
                                 <strong>Data Fine:</strong> {viaggio.dataFine}
                             </p>
-                            <h3>Partecipanti:</h3>
-                            {viaggio.partecipanti.map((p) => (
-                                <div
-                                    key={p.id}
-                                    style={{
-                                        background: "white",
-                                        padding: 12,
-                                        marginBottom: 10,
-                                        borderRadius: 6,
-                                        borderLeft: "4px solid #1e88e5",
-                                    }}
-                                >
-                                    <p>
-                                        <strong>Nome:</strong> {p.nome} {p.cognome}
-                                    </p>
-                                    <p>
-                                        <strong>Email:</strong> {p.email}
-                                    </p>
-                                    <p>
-                                        <strong>Telefono:</strong> {p.telefono}
-                                    </p>
-                                    <p>
-                                        <strong>Data di nascita:</strong> {p.dataNascita}
-                                    </p>
-                                </div>
-                            ))}
+
+                            <button
+                                style={{
+                                    marginTop: 15,
+                                    padding: "10px 15px",
+                                    background: "#1e88e5",
+                                    color: "white",
+                                    border: "none",
+                                    borderRadius: 6,
+                                    cursor: "pointer",
+                                }}
+                                onClick={() => navigate('/viaggio/${ viaggio.id }')}
+                            >
+                                Dettaglio Viaggio
+                            </button>
+
                         </div>
                     )}
                 </div>
