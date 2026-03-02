@@ -1,10 +1,10 @@
-
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import viaggi from "../data/dbTravel";
 
 export default function Home() {
     const [openId, setOpenId] = useState(null);
-
+    const navigate = useNavigate();
     const toggleAccordion = (id) => {
         setOpenId(openId === id ? null : id);
     };
@@ -48,22 +48,11 @@ export default function Home() {
                             <p>
                                 <strong>Data Fine:</strong> {viaggio.dataFine}
                             </p>
-
                             <button
-                                style={{
-                                    marginTop: 15,
-                                    padding: "10px 15px",
-                                    background: "#1e88e5",
-                                    color: "white",
-                                    border: "none",
-                                    borderRadius: 6,
-                                    cursor: "pointer",
-                                }}
-                                onClick={() => navigate('/viaggio/${ viaggio.id }')}
+                                onClick={() => navigate(`/viaggio/${viaggio.id}`)}
                             >
                                 Dettaglio Viaggio
                             </button>
-
                         </div>
                     )}
                 </div>
@@ -71,3 +60,4 @@ export default function Home() {
         </div>
     );
 }
+
