@@ -1,7 +1,6 @@
 
 import React, { useState } from "react";
-// Importiamo i dati dal file dbTravel.js
-import { viaggi } from "../data/dbTravel";
+import  viaggi  from "../data/dbTravel";
 
 export default function Home() {
     const [openId, setOpenId] = useState(null);
